@@ -1,4 +1,4 @@
-import { Instagram, Mail, Phone } from "lucide-react";
+import { Instagram, Mail, Phone, MessageCircle } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo.png.asset.json";
 import { CONTACT, NAV_LINKS, SERVICES } from "@/data/site";
@@ -22,9 +22,10 @@ export function Footer() {
             fees, and data-driven choice-filling — for students who deserve better.
           </p>
           <div className="mt-6 flex gap-3">
-            <a href={CONTACT.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-[color:var(--gold)] hover:text-[color:var(--navy-950)]"><Instagram className="h-4 w-4" /></a>
+            <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-[#25D366] hover:text-white"><MessageCircle className="h-4 w-4" /></a>
+            <a href={`tel:${CONTACT.phoneTel}`} aria-label="Phone" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-[color:var(--gold)] hover:text-[color:var(--navy-950)]"><Phone className="h-4 w-4" /></a>
             <a href={`mailto:${CONTACT.email}`} aria-label="Email" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-[color:var(--gold)] hover:text-[color:var(--navy-950)]"><Mail className="h-4 w-4" /></a>
-            <a href={`tel:${CONTACT.phone.replace(/\s/g, "")}`} aria-label="Phone" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-[color:var(--gold)] hover:text-[color:var(--navy-950)]"><Phone className="h-4 w-4" /></a>
+            <a href={CONTACT.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-[color:var(--gold)] hover:text-[color:var(--navy-950)]"><Instagram className="h-4 w-4" /></a>
           </div>
         </div>
 
@@ -45,9 +46,10 @@ export function Footer() {
         <div>
           <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--gold)]">Reach us</h4>
           <ul className="space-y-3 text-sm text-white/75">
+            <li className="flex items-start gap-3"><Phone className="mt-0.5 h-4 w-4 text-[color:var(--gold)]" /> <a href={`tel:${CONTACT.phoneTel}`} className="hover:text-white">{CONTACT.phone}</a></li>
+            <li className="flex items-start gap-3"><MessageCircle className="mt-0.5 h-4 w-4 text-[color:var(--gold)]" /> <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" className="hover:text-white">WhatsApp {CONTACT.whatsappLabel}</a></li>
             <li className="flex items-start gap-3"><Mail className="mt-0.5 h-4 w-4 text-[color:var(--gold)]" /> <a href={`mailto:${CONTACT.email}`} className="hover:text-white break-all">{CONTACT.email}</a></li>
-            <li className="flex items-start gap-3"><Phone className="mt-0.5 h-4 w-4 text-[color:var(--gold)]" /> <a href={`tel:${CONTACT.phone.replace(/\s/g, "")}`} className="hover:text-white">{CONTACT.phone}</a></li>
-            <li className="flex items-start gap-3"><Instagram className="mt-0.5 h-4 w-4 text-[color:var(--gold)]" /> <a href={CONTACT.instagram} className="hover:text-white" target="_blank" rel="noreferrer">@neet.expert</a></li>
+            <li className="flex items-start gap-3"><Instagram className="mt-0.5 h-4 w-4 text-[color:var(--gold)]" /> <a href={CONTACT.instagram} className="hover:text-white" target="_blank" rel="noreferrer">{CONTACT.instagramHandle}</a></li>
           </ul>
         </div>
       </div>

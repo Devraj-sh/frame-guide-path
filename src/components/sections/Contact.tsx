@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { toast } from "sonner";
-import { Loader2, Mail, Phone, Instagram, Send, Sparkles } from "lucide-react";
+import { Loader2, Mail, Phone, Instagram, MessageCircle, Send, Sparkles } from "lucide-react";
 import { submitEnquiry } from "@/lib/enquiry.functions";
 import { CONTACT } from "@/data/site";
 import logoAsset from "@/assets/logo.png.asset.json";
@@ -74,18 +74,25 @@ export function Contact() {
                   <span className="block text-sm font-medium group-hover:text-[color:var(--gold)] break-all">{CONTACT.email}</span>
                 </span>
               </a>
-              <a href={`tel:${CONTACT.phone.replace(/\s/g, "")}`} className="group flex items-start gap-4">
+              <a href={`tel:${CONTACT.phoneTel}`} className="group flex items-start gap-4">
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-[color:var(--gold)]"><Phone className="h-4 w-4" /></span>
                 <span>
                   <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-white/50">Phone</span>
                   <span className="block text-sm font-medium group-hover:text-[color:var(--gold)]">{CONTACT.phone}</span>
                 </span>
               </a>
+              <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" className="group flex items-start gap-4">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-[color:var(--gold)]"><MessageCircle className="h-4 w-4" /></span>
+                <span>
+                  <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-white/50">WhatsApp</span>
+                  <span className="block text-sm font-medium group-hover:text-[color:var(--gold)]">{CONTACT.whatsappLabel}</span>
+                </span>
+              </a>
               <a href={CONTACT.instagram} target="_blank" rel="noreferrer" className="group flex items-start gap-4">
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-[color:var(--gold)]"><Instagram className="h-4 w-4" /></span>
                 <span>
                   <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-white/50">Instagram</span>
-                  <span className="block text-sm font-medium group-hover:text-[color:var(--gold)]">@neet.expert</span>
+                  <span className="block text-sm font-medium group-hover:text-[color:var(--gold)]">{CONTACT.instagramHandle}</span>
                 </span>
               </a>
             </div>
