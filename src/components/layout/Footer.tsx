@@ -1,4 +1,5 @@
 import { Instagram, Mail, Phone } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/logo.png.asset.json";
 import { CONTACT, NAV_LINKS, SERVICES } from "@/data/site";
 
@@ -30,14 +31,14 @@ export function Footer() {
         <div>
           <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--gold)]">Explore</h4>
           <ul className="space-y-2 text-sm text-white/75">
-            {NAV_LINKS.map((l) => <li key={l.href}><a href={l.href} className="hover:text-white">{l.label}</a></li>)}
+            {NAV_LINKS.map((l) => <li key={l.href}><Link to={l.href} className="hover:text-white">{l.label}</Link></li>)}
           </ul>
         </div>
 
         <div>
           <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--gold)]">Services</h4>
           <ul className="space-y-2 text-sm text-white/75">
-            {SERVICES.slice(0, 6).map((s) => <li key={s.title}><a href="#services" className="hover:text-white">{s.title}</a></li>)}
+            {SERVICES.slice(0, 6).map((s) => <li key={s.title}><Link to="/services" className="hover:text-white">{s.title}</Link></li>)}
           </ul>
         </div>
 
