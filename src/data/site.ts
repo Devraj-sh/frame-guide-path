@@ -5,9 +5,9 @@ import {
 
 export const CONTACT = {
   email: "expertneet121@gmail.com",
-  phone: "+91 98765 43210",
-  whatsapp: "https://wa.me/919876543210",
-  instagram: "https://instagram.com/neet.expert",
+  phone: "+91 88826 11683",
+  whatsapp: "https://wa.me/918882611683",
+  instagram: "https://instagram.com/neetexpert.121",
   tagline: "Right Path Changes Everything",
 };
 

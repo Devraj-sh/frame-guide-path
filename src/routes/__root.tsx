@@ -12,6 +12,8 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import logoAsset from "@/assets/logo.png.asset.json";
+import { FloatingDock } from "@/components/layout/FloatingDock";
+import { ConsultationPopup } from "@/components/layout/ConsultationPopup";
 
 function NotFoundComponent() {
   return (
@@ -130,6 +132,8 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <FloatingDock />
+      <ConsultationPopup />
     </QueryClientProvider>
   );
 }
