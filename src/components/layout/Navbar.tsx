@@ -31,12 +31,6 @@ export function Navbar({ variant = "hero" }: Props) {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-3" aria-label="NEET Expert home">
-            <img
-              src={logoAsset.url}
-              alt=""
-              className="h-10 w-auto transition-transform duration-500 data-[s=true]:scale-90"
-              data-s={scrolled}
-            />
             <span
               className={`font-display text-lg font-bold tracking-tight transition-colors duration-500 ${scrolled ? "text-[color:var(--navy-950)]" : "text-white"}`}
             >
