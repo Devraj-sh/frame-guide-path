@@ -70,11 +70,19 @@ export function ConsultationPopup() {
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <a
-              href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
+              href={`tel:${CONTACT.phoneTel}`}
               className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-white/10"
             >
               <Phone className="h-3.5 w-3.5" />
               {CONTACT.phone}
+            </a>
+            <a
+              href={CONTACT.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366] px-4 py-2.5 text-xs font-semibold text-white shadow-soft transition-transform hover:scale-[1.03]"
+            >
+              WhatsApp
             </a>
           </div>
         </div>
