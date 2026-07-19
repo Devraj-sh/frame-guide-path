@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import logoAsset from "@/assets/logo.png.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -77,21 +78,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "NEET Expert — Premium NEET UG Counselling & Medical Admission Guidance" },
+      { name: "description", content: "India's most trusted NEET counselling firm. Personalised medical college admission guidance, MBBS/BDS/AYUSH counselling, and choice-filling strategy from experts who care." },
+      { name: "author", content: "NEET Expert" },
+      { name: "theme-color", content: "#0b1a3a" },
+      { property: "og:title", content: "NEET Expert — Right Path Changes Everything" },
+      { property: "og:description", content: "Premium NEET UG counselling and medical college admission guidance. Personal mentors, transparent choice-filling, thousands of students placed." },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: logoAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "NEET Expert — Right Path Changes Everything" },
+      { name: "twitter:description", content: "Premium NEET UG counselling and medical college admission guidance." },
+      { name: "twitter:image", content: logoAsset.url },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: logoAsset.url, type: "image/png" },
+      { rel: "apple-touch-icon", href: logoAsset.url },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" },
     ],
   }),
   shellComponent: RootShell,
