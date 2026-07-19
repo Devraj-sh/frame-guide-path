@@ -12,14 +12,14 @@ export const CONTACT = {
 };
 
 export const NAV_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#process", label: "Process" },
-  { href: "#colleges", label: "Colleges" },
-  { href: "#success", label: "Success" },
-  { href: "#blog", label: "Insights" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/process", label: "Process" },
+  { href: "/colleges", label: "Colleges" },
+  { href: "/success", label: "Success" },
+  { href: "/blog", label: "Insights" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const STATS = [

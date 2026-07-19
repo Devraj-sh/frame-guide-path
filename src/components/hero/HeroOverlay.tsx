@@ -1,10 +1,5 @@
 import { ArrowRight, Sparkles } from "lucide-react";
-
-function scrollTo(id: string) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.scrollIntoView({ behavior: "smooth", block: "start" });
-}
+import { Link } from "@tanstack/react-router";
 
 export function HeroOverlay() {
   return (
@@ -28,19 +23,19 @@ export function HeroOverlay() {
       </p>
 
       <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-        <button
-          onClick={() => scrollTo("contact")}
+        <Link
+          to="/contact"
           className="group inline-flex items-center gap-2 rounded-full bg-gradient-gold px-7 py-3.5 text-sm font-semibold text-[color:var(--navy-950)] shadow-gold-glow transition-transform duration-300 hover:scale-[1.03]"
         >
           Book Free Consultation
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-        </button>
-        <button
-          onClick={() => scrollTo("colleges")}
+        </Link>
+        <Link
+          to="/colleges"
           className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/10"
         >
           Explore Colleges
-        </button>
+        </Link>
       </div>
 
       <div className="pointer-events-none absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/50">
