@@ -1,5 +1,4 @@
 import { ArrowRight, Sparkles } from "lucide-react";
-import logoAsset from "@/assets/logo.png.asset.json";
 
 function scrollTo(id: string) {
   const el = document.getElementById(id);
@@ -14,12 +13,6 @@ export function HeroOverlay() {
         <Sparkles className="h-3.5 w-3.5 text-[color:var(--gold)]" />
         India's Premium NEET Counselling
       </div>
-
-      <img
-        src={logoAsset.url}
-        alt="NEET Expert"
-        className="mb-6 h-20 w-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] sm:h-28 md:h-36"
-      />
 
       <h1 className="font-display text-balance text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
         <span className="block">NEET</span>
