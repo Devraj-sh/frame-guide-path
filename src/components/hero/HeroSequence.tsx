@@ -15,7 +15,8 @@ export function HeroSequence({ onReady }: Props) {
   const currentIndexRef = useRef(0);
 
   useEffect(() => {
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const mq = window.matchMedia("(max-width: 768px)");
+    let isMobile = mq.matches;
     const list = isMobile ? heroFramesMobile : heroFramesDesktop;
     const imgs: (HTMLImageElement | null)[] = new Array(HERO_FRAME_COUNT).fill(null);
     framesRef.current = imgs;
@@ -75,8 +76,12 @@ export function HeroSequence({ onReady }: Props) {
       iw = img.naturalWidth; ih = img.naturalHeight;
       if (!iw || !ih) return;
       const cW = canvas.width, cH = canvas.height;
-      // cover fit
-      const s = Math.max(cW / iw, cH / ih);
+      // On mobile portrait, cover-fit crops too aggressively — use contain and
+      // let the navy background frame the letterboxed sides.
+      const portrait = cH > cW;
+      const s = isMobile && portrait
+        ? Math.min(cW / iw, cH / ih) * 1.02
+        : Math.max(cW / iw, cH / ih);
       const w = iw * s, h = ih * s;
       const x = (cW - w) / 2, y = (cH - h) / 2;
       ctx.clearRect(0, 0, cW, cH);
@@ -85,6 +90,11 @@ export function HeroSequence({ onReady }: Props) {
 
     resize();
     window.addEventListener("resize", resize);
+    const onMqChange = (e: MediaQueryListEvent) => {
+      isMobile = e.matches;
+      draw();
+    };
+    mq.addEventListener?.("change", onMqChange);
 
     // ScrollTrigger pin + scrub
     const section = sectionRef.current!;
@@ -93,7 +103,7 @@ export function HeroSequence({ onReady }: Props) {
     const st = ScrollTrigger.create({
       trigger: section,
       start: "top top",
-      end: `+=${Math.max(2400, HERO_FRAME_COUNT * 10)}`,
+      end: `+=${isMobile ? Math.max(1600, HERO_FRAME_COUNT * 7) : Math.max(2400, HERO_FRAME_COUNT * 10)}`,
       pin: true,
       pinSpacing: true,
       scrub: reduce ? true : 0.4,
@@ -115,6 +125,7 @@ export function HeroSequence({ onReady }: Props) {
 
     return () => {
       window.removeEventListener("resize", resize);
+      mq.removeEventListener?.("change", onMqChange);
       st.kill();
       document.body.dataset.pastHero = "false";
       document.documentElement.style.setProperty("--hero-progress", "0");
