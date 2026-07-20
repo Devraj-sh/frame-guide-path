@@ -84,8 +84,11 @@ export function HeroSequence({ onReady }: Props) {
       // On mobile, the second half of the sequence (doctor with stethoscope,
       // frames 0140+ → indices ≥ 72) sits off-centre in the source frame.
       // Nudge the image right so the doctor stays visible in portrait crops.
+      // Doctor with stethoscope sits on the far LEFT of the source frame.
+      // Push the image right so its left edge scrolls into view on mobile.
       if (isMobile && target >= 72) {
-        x += cW * 0.18;
+        const maxShift = Math.max(0, (w - cW) / 2); // don't expose blank canvas
+        x += Math.min(cW * 0.38, maxShift);
       }
       ctx.clearRect(0, 0, cW, cH);
       ctx.drawImage(img, x, y, w, h);
