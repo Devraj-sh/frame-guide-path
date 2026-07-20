@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { heroFramesDesktop, heroFramesMobile, HERO_FRAME_COUNT } from "@/data/heroFrames";
+import { heroFramesDesktop, HERO_FRAME_COUNT } from "@/data/heroFrames";
 import { HeroOverlay } from "./HeroOverlay";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,7 +17,10 @@ export function HeroSequence({ onReady }: Props) {
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 768px)");
     let isMobile = mq.matches;
-    const list = isMobile ? heroFramesMobile : heroFramesDesktop;
+    // Use the high-resolution desktop frames on every viewport — the mobile
+    // 850px WebPs looked blurry on high-DPR phone screens. Desktop frames
+    // (1500px) stay crisp when scaled down and only add a few hundred KB.
+    const list = heroFramesDesktop;
     // Mobile only uses the first 72 frames (drop the doctor-with-stethoscope
     // segment, originally desktop_0140+). Desktop keeps the full sequence.
     const MOBILE_FRAME_COUNT = 72;
