@@ -1,5 +1,5 @@
-// Auto-generated hero frame manifest — 212 sequential frames served from /public/hero-frames.
-export const HERO_FRAME_COUNT = 212;
+// Auto-generated hero frame manifest — 145 sequential frames served from /public/hero-frames.
+export const HERO_FRAME_COUNT = 145;
 
 export const heroFramesDesktop: readonly string[] = [
   "/hero-frames/desktop/desktop_0001.webp",
@@ -74,9 +74,6 @@ export const heroFramesDesktop: readonly string[] = [
   "/hero-frames/desktop/desktop_0070.webp",
   "/hero-frames/desktop/desktop_0071.webp",
   "/hero-frames/desktop/desktop_0072.webp",
-  "/hero-frames/desktop/desktop_0073.webp",
-  "/hero-frames/desktop/desktop_0074.webp",
-  "/hero-frames/desktop/desktop_0075.webp",
   "/hero-frames/desktop/desktop_0140.webp",
   "/hero-frames/desktop/desktop_0141.webp",
   "/hero-frames/desktop/desktop_0142.webp",
@@ -225,9 +222,6 @@ export const heroFramesMobile: readonly string[] = [
   "/hero-frames/mobile/mobile_0070.webp",
   "/hero-frames/mobile/mobile_0071.webp",
   "/hero-frames/mobile/mobile_0072.webp",
-  "/hero-frames/mobile/mobile_0073.webp",
-  "/hero-frames/mobile/mobile_0074.webp",
-  "/hero-frames/mobile/mobile_0075.webp",
   "/hero-frames/mobile/mobile_0140.webp",
   "/hero-frames/mobile/mobile_0141.webp",
   "/hero-frames/mobile/mobile_0142.webp",
