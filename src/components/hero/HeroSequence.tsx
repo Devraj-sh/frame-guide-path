@@ -18,7 +18,11 @@ export function HeroSequence({ onReady }: Props) {
     const mq = window.matchMedia("(max-width: 768px)");
     let isMobile = mq.matches;
     const list = isMobile ? heroFramesMobile : heroFramesDesktop;
-    const imgs: (HTMLImageElement | null)[] = new Array(HERO_FRAME_COUNT).fill(null);
+    // Mobile only uses the first 72 frames (drop the doctor-with-stethoscope
+    // segment, originally desktop_0140+). Desktop keeps the full sequence.
+    const MOBILE_FRAME_COUNT = 72;
+    const frameCount = isMobile ? Math.min(MOBILE_FRAME_COUNT, list.length) : HERO_FRAME_COUNT;
+    const imgs: (HTMLImageElement | null)[] = new Array(frameCount).fill(null);
     framesRef.current = imgs;
 
     let readyCount = 0;
@@ -37,13 +41,13 @@ export function HeroSequence({ onReady }: Props) {
     };
 
     // eager load first N in parallel
-    for (let i = 0; i < Math.min(eager, HERO_FRAME_COUNT); i++) loadFrame(i);
+    for (let i = 0; i < Math.min(eager, frameCount); i++) loadFrame(i);
 
     // stream the rest sequentially with a small pool
     let next = eager;
     const POOL = 6;
     const streamOne = () => {
-      if (next >= HERO_FRAME_COUNT) return;
+      if (next >= frameCount) return;
       const idx = next++;
       loadFrame(idx, streamOne);
     };
@@ -68,7 +72,7 @@ export function HeroSequence({ onReady }: Props) {
       const target = currentIndexRef.current;
       // find nearest loaded ≤ target, then ≥ target as fallback
       let img: HTMLImageElement | null = null;
-      for (let d = 0; d <= HERO_FRAME_COUNT; d++) {
+      for (let d = 0; d <= frameCount; d++) {
         if (imgs[target - d]) { img = imgs[target - d]!; break; }
         if (imgs[target + d]) { img = imgs[target + d]!; break; }
       }
@@ -79,17 +83,8 @@ export function HeroSequence({ onReady }: Props) {
       // Cover-fit on all viewports (matches earlier behaviour).
       const s = Math.max(cW / iw, cH / ih);
       const w = iw * s, h = ih * s;
-      let x = (cW - w) / 2;
+      const x = (cW - w) / 2;
       const y = (cH - h) / 2;
-      // On mobile, the second half of the sequence (doctor with stethoscope,
-      // frames 0140+ → indices ≥ 72) sits off-centre in the source frame.
-      // Nudge the image right so the doctor stays visible in portrait crops.
-      // Doctor with stethoscope sits on the far LEFT of the source frame.
-      // Push the image right so its left edge scrolls into view on mobile.
-      if (isMobile && target >= 72) {
-        const maxShift = Math.max(0, (w - cW) / 2); // don't expose blank canvas
-        x += Math.min(cW * 0.38, maxShift);
-      }
       ctx.clearRect(0, 0, cW, cH);
       ctx.drawImage(img, x, y, w, h);
     };
@@ -109,14 +104,14 @@ export function HeroSequence({ onReady }: Props) {
     const st = ScrollTrigger.create({
       trigger: section,
       start: "top top",
-      end: `+=${isMobile ? Math.max(1600, HERO_FRAME_COUNT * 7) : Math.max(2400, HERO_FRAME_COUNT * 10)}`,
+      end: `+=${isMobile ? Math.max(1200, frameCount * 10) : Math.max(2400, frameCount * 10)}`,
       pin: true,
       pinSpacing: true,
       scrub: reduce ? true : 0.4,
       anticipatePin: 1,
       onUpdate: (self) => {
         const p = self.progress;
-        const target = Math.min(HERO_FRAME_COUNT - 1, Math.round(p * (HERO_FRAME_COUNT - 1)));
+        const target = Math.min(frameCount - 1, Math.round(p * (frameCount - 1)));
         if (target !== currentIndexRef.current) {
           currentIndexRef.current = target;
           draw();
