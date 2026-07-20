@@ -76,14 +76,17 @@ export function HeroSequence({ onReady }: Props) {
       iw = img.naturalWidth; ih = img.naturalHeight;
       if (!iw || !ih) return;
       const cW = canvas.width, cH = canvas.height;
-      // On mobile portrait, cover-fit crops too aggressively — use contain and
-      // let the navy background frame the letterboxed sides.
-      const portrait = cH > cW;
-      const s = isMobile && portrait
-        ? Math.min(cW / iw, cH / ih) * 1.02
-        : Math.max(cW / iw, cH / ih);
+      // Cover-fit on all viewports (matches earlier behaviour).
+      const s = Math.max(cW / iw, cH / ih);
       const w = iw * s, h = ih * s;
-      const x = (cW - w) / 2, y = (cH - h) / 2;
+      let x = (cW - w) / 2;
+      const y = (cH - h) / 2;
+      // On mobile, the second half of the sequence (doctor with stethoscope,
+      // frames 0140+ → indices ≥ 72) sits off-centre in the source frame.
+      // Nudge the image right so the doctor stays visible in portrait crops.
+      if (isMobile && target >= 72) {
+        x += cW * 0.18;
+      }
       ctx.clearRect(0, 0, cW, cH);
       ctx.drawImage(img, x, y, w, h);
     };
