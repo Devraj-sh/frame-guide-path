@@ -20,8 +20,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "NEET Expert — Premium NEET UG Counselling & Medical Admission Guidance" },
       { name: "description", content: "India's premium NEET UG counselling firm. Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free consultation today." },
-      { property: "og:title", content: "NEET Expert — Right Path Changes Everything" },
-      { property: "og:description", content: "Premium NEET UG counselling & medical admission guidance from senior mentors who care about outcomes." },
+      { property: "og:title", content: "NEET Expert — Premium NEET UG Counselling & Medical Admission Guidance" },
+      { property: "og:description", content: "India's premium NEET UG counselling firm. Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free consultation today." },
       { property: "og:type", content: "website" },
       { property: "og:image", content: logoAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
