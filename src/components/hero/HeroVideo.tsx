@@ -16,9 +16,18 @@ export function HeroVideo() {
   }, []);
 
   useEffect(() => {
-    // Reset past-hero flag used by Navbar/other listeners
     document.body.dataset.pastHero = "false";
+    const onScroll = () => {
+      const past = window.scrollY > window.innerHeight * 0.3;
+      const val = String(past);
+      if (document.body.dataset.pastHero !== val) {
+        document.body.dataset.pastHero = val;
+      }
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
+      window.removeEventListener("scroll", onScroll);
       document.body.dataset.pastHero = "false";
     };
   }, []);
