@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Toaster } from "sonner";
 import Lenis from "lenis";
 import { ArrowRight } from "lucide-react";
-import { HeroSequence } from "@/components/hero/HeroSequence";
+import { HeroVideo } from "@/components/hero/HeroVideo";
 import { Navbar } from "@/components/layout/Navbar";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
@@ -75,7 +75,7 @@ function Home() {
       <ScrollProgress />
       <Navbar />
       <main>
-        <HeroSequence />
+        <HeroVideo />
         <About />
         <WhyUs />
         <ExploreGrid />
