@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { Loader2, Mail, Phone, Instagram, MessageCircle, Send, Sparkles } from "lucide-react";
 import { submitEnquiry } from "@/lib/enquiry.functions";
 import { CONTACT } from "@/data/site";
-import logoAsset from "@/assets/logo.png.asset.json";
+const logoUrl = "/media/logo.png";
 
 export function Contact() {
   const submit = useServerFn(submitEnquiry);
@@ -98,7 +98,7 @@ export function Contact() {
             </div>
 
             <div className="relative mt-12 flex items-center gap-3">
-              <img src={logoAsset.url} alt="" className="h-10 w-auto" />
+              <img src={logoUrl} alt="" className="h-10 w-auto" />
               <div className="text-xs uppercase tracking-[0.25em] text-white/50">{CONTACT.tagline}</div>
             </div>
           </div>
