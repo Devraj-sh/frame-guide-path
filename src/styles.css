@@ -207,6 +207,13 @@
     will-change: opacity, transform, filter;
   }
 
+  .hero-scope {
+    --gold: oklch(0.78 0.14 85);
+    --gold-soft: oklch(0.88 0.09 85);
+    --gradient-gold: linear-gradient(135deg, oklch(0.72 0.15 85) 0%, oklch(0.88 0.11 88) 100%);
+    --shadow-gold-glow: 0 20px 60px -20px oklch(0.78 0.14 85 / 0.5);
+  }
+
   .reveal-up {
     opacity: 0;
     transform: translateY(28px);

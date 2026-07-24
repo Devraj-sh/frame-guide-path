@@ -37,7 +37,7 @@ export function HeroVideo() {
   return (
     <section
       aria-label="NEET Success introduction"
-      className="relative h-screen w-full overflow-hidden bg-navy-950"
+      className="hero-scope relative h-screen w-full overflow-hidden bg-navy-950"
     >
       <video
         key={src}
