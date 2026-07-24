@@ -5,11 +5,14 @@ import { Colleges } from "@/components/sections/Colleges";
 export const Route = createFileRoute("/colleges")({
   head: () => ({
     meta: [
-      { title: "Medical Colleges Database — Fees, Cutoffs, Types | NEET Success" },
+      { title: "Medical Colleges — Fees & Cutoffs | NEET Success" },
       { name: "description", content: "Explore government, private and deemed medical colleges across India with real fees, cutoffs and category breakdowns." },
       { property: "og:title", content: "Medical Colleges — NEET Success" },
       { property: "og:description", content: "India's medical colleges with real fees and cutoffs." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://neetexpert.lovable.app/colleges" },
     ],
+    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/colleges" }],
   }),
   component: CollegesPage,
 });

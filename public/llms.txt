@@ -1,0 +1,23 @@
+# NEET Success
+
+> India's premium NEET UG counselling & medical college admission guidance firm. Personal mentors, transparent choice-filling, thousands of medical seats secured.
+
+NEET Success is a boutique counselling firm helping NEET UG aspirants secure MBBS, BDS, AYUSH and nursing seats across All India Quota, state quota, deemed and private medical colleges — plus vetted MBBS Abroad options. Every student gets a dedicated senior mentor from result day through college reporting.
+
+## Pages
+
+- [Home](/): Overview of NEET Success counselling with hero, services and CTA.
+- [About](/about): Mission, vision and the senior mentors behind the firm.
+- [Services](/services): AIQ, state, deemed, private, AYUSH, nursing and MBBS abroad counselling.
+- [Process](/process): The transparent 8-step counselling journey from discovery call to reporting day.
+- [Colleges](/colleges): Searchable database of Indian medical colleges with real fees and cutoffs.
+- [Success Stories](/success): Real students placed in AIIMS, MAMC, Grant, KMC Manipal and more.
+- [Insights](/blog): Long-form guides on choice-filling, college comparisons and counselling strategy.
+- [FAQ](/faq): Common questions on fees, mentorship, seat guarantees and MBBS abroad.
+- [Contact](/contact): Book a free 30-minute consultation with a senior mentor.
+
+## Contact
+
+- Email: expertneet121@gmail.com
+- Phone / WhatsApp: +91 8882611683
+- Instagram: @neetexpert.121

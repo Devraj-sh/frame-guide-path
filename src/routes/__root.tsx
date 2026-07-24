@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 const logoUrl = "/media/logo.png";
+const SITE_URL = "https://neetexpert.lovable.app";
 import { FloatingDock } from "@/components/layout/FloatingDock";
 import { ConsultationPopup } from "@/components/layout/ConsultationPopup";
 
@@ -80,20 +81,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NEET Success — Premium NEET UG Counselling & Medical Admission Guidance" },
-      { name: "description", content: "India's premium NEET UG counselling firm. Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free consultation today." },
       { name: "author", content: "NEET Success" },
       { name: "theme-color", content: "#0b1a3a" },
-      { property: "og:title", content: "NEET Success — Premium NEET UG Counselling & Medical Admission Guidance" },
-      { property: "og:description", content: "India's premium NEET UG counselling firm. Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free consultation today." },
+      { property: "og:site_name", content: "NEET Success" },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: logoUrl },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "NEET Success — Premium NEET UG Counselling & Medical Admission Guidance" },
-      { name: "twitter:description", content: "India's premium NEET UG counselling firm. Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free consultation today." },
-      { name: "twitter:image", content: logoUrl },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2cc7aa62-adc7-433e-88c1-df8fe0d1c8b4/id-preview-db84a6f1--f3d95cac-e461-4298-b017-74642cc04bc1.lovable.app-1784537854632.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2cc7aa62-adc7-433e-88c1-df8fe0d1c8b4/id-preview-db84a6f1--f3d95cac-e461-4298-b017-74642cc04bc1.lovable.app-1784537854632.png" },
     ],
     links: [
       {
@@ -105,6 +97,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "NEET Success",
+          url: SITE_URL,
+          logo: `${SITE_URL}/media/logo.png`,
+          email: "expertneet121@gmail.com",
+          telephone: "+91-8882611683",
+          sameAs: ["https://www.instagram.com/neetexpert.121"],
+          description: "India's premium NEET UG counselling & medical college admission guidance firm.",
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

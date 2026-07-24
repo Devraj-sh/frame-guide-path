@@ -10,7 +10,10 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Meet the boutique NEET counselling team behind thousands of medical seats — mission, vision, and the mentors who guide every student personally." },
       { property: "og:title", content: "About NEET Success" },
       { property: "og:description", content: "Senior NEET counselling mentors — mission, vision and outcomes." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://neetexpert.lovable.app/about" },
     ],
+    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/about" }],
   }),
   component: AboutPage,
 });
