@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import logoAsset from "@/assets/logo-transparent.png.asset.json";
+const logoUrl = "/media/logo-transparent.png";
 import { NAV_LINKS } from "@/data/site";
 
 type Props = { variant?: "hero" | "solid" };
@@ -32,7 +32,7 @@ export function Navbar({ variant = "hero" }: Props) {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-3" aria-label="NEET Success home">
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="NEET Success"
               className={`h-10 w-auto transition-all duration-500 sm:h-11 ${scrolled ? "" : "brightness-0 invert"}`}
             />
@@ -81,7 +81,7 @@ export function Navbar({ variant = "hero" }: Props) {
         <div className="fixed inset-0 z-[60] flex flex-col bg-gradient-navy p-6 text-white lg:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src={logoAsset.url} alt="" className="h-9 w-auto" />
+              <img src={logoUrl} alt="" className="h-9 w-auto" />
               <span className="font-display text-lg font-bold">NEET <span className="text-[color:var(--gold)]">Success</span></span>
             </div>
             <button
