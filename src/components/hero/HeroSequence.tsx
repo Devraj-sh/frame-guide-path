@@ -139,7 +139,7 @@ export function HeroSequence({ onReady }: Props) {
   return (
     <section
       ref={sectionRef}
-      aria-label="Meet Success introduction"
+      aria-label="NEET Success introduction"
       className="relative h-screen w-full overflow-hidden bg-navy-950"
     >
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />

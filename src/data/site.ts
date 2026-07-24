@@ -92,7 +92,7 @@ export const COLLEGES: College[] = [
 export const STORIES = [
   { name: "Ananya Sharma", rank: "AIR 342", college: "Maulana Azad Medical College", quote: "The choice-filling session literally saved my seat — they mapped my rank against 40+ colleges in one call." },
   { name: "Rohan Verma", rank: "AIR 1,824", college: "Grant Medical College, Mumbai", quote: "I nearly wasted my Round 1 on a wrong upgrade. My mentor called me at 11 PM to re-strategise. Priceless." },
-  { name: "Priya Iyer", rank: "AIR 4,910", college: "Bangalore Medical College", quote: "Coming from a Tier-3 city, we had zero idea about state quota nuances. Meet Success walked us through everything." },
+  { name: "Priya Iyer", rank: "AIR 4,910", college: "Bangalore Medical College", quote: "Coming from a Tier-3 city, we had zero idea about state quota nuances. NEET Success walked us through everything." },
   { name: "Aditya Patel", rank: "AIR 12,540", college: "GMC Surat", quote: "Their private vs deemed fee analysis alone saved us ₹40 lakhs over the course. Transparent, honest guidance." },
   { name: "Kavya Nair", rank: "AIR 6,220", college: "Amrita Institute of Medical Sciences", quote: "Every single doubt was answered within minutes. It felt like having a doctor cousin in the family." },
 ];

@@ -5,10 +5,10 @@ import { Process } from "@/components/sections/Process";
 export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
-      { title: "Our 8-Step NEET Counselling Process — Meet Success" },
+      { title: "Our 8-Step NEET Counselling Process — NEET Success" },
       { name: "description", content: "From free discovery call to post-admission support — a transparent 8-step process that has placed thousands of students in Indian medical colleges." },
       { property: "og:title", content: "Our Counselling Process" },
-      { property: "og:description", content: "The 8-step Meet Success counselling journey." },
+      { property: "og:description", content: "The 8-step NEET Success counselling journey." },
     ],
   }),
   component: ProcessPage,

@@ -36,8 +36,8 @@ export function HeroVideo() {
 
   return (
     <section
-      aria-label="Meet Success introduction"
-      className="relative h-screen w-full overflow-hidden bg-navy-950"
+      aria-label="NEET Success introduction"
+      className="hero-scope relative h-screen w-full overflow-hidden bg-navy-950"
     >
       <video
         key={src}
