@@ -5,9 +5,9 @@ import { Blog } from "@/components/sections/Blog";
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "NEET Counselling Insights & Guides — Meet Success Blog" },
+      { title: "NEET Counselling Insights & Guides — NEET Success Blog" },
       { name: "description", content: "Choice-filling frameworks, college comparisons, state quota rules, deemed college ROI — deep-dive insights for NEET UG aspirants and parents." },
-      { property: "og:title", content: "Meet Success Insights" },
+      { property: "og:title", content: "NEET Success Insights" },
       { property: "og:description", content: "Deep-dive NEET counselling guides and strategy." },
     ],
   }),

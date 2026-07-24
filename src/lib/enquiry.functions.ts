@@ -64,7 +64,7 @@ export const submitEnquiry = createServerFn({ method: "POST" })
       if (gwKey && resendKey) {
         const html = `
           <div style="font-family:Inter,Arial,sans-serif;max-width:560px;margin:auto;padding:24px;background:#0b1a3a;color:#f8fafc;border-radius:16px">
-            <h2 style="margin:0 0 12px;color:#e8c56a">New Meet Success Enquiry</h2>
+            <h2 style="margin:0 0 12px;color:#e8c56a">New NEET Success Enquiry</h2>
             <p style="margin:0 0 16px;color:#cbd5e1">Source: ${data.source}</p>
             <table style="width:100%;border-collapse:collapse;color:#f8fafc">
               <tr><td style="padding:6px 0;color:#94a3b8">Name</td><td>${escape(data.name)}</td></tr>
@@ -84,7 +84,7 @@ export const submitEnquiry = createServerFn({ method: "POST" })
             "X-Connection-Api-Key": resendKey,
           },
           body: JSON.stringify({
-            from: "Meet Success <onboarding@resend.dev>",
+            from: "NEET Success <onboarding@resend.dev>",
             to: ["expertneet121@gmail.com"],
             subject: `New enquiry — ${data.name}`,
             html,

@@ -38,7 +38,7 @@ export function About() {
         <SectionHeader
           eyebrow="Who we are"
           title={<>Counselling that treats your future <span className="text-gradient-gold">like our own.</span></>}
-          subtitle="Meet Success is a boutique counselling firm run by senior mentors who have personally guided thousands of students into India's most competitive medical seats. No call-centres, no upsells — just the right advice, at the right moment."
+          subtitle="NEET Success is a boutique counselling firm run by senior mentors who have personally guided thousands of students into India's most competitive medical seats. No call-centres, no upsells — just the right advice, at the right moment."
         />
 
         <div className="mt-20 grid gap-8 lg:grid-cols-2">

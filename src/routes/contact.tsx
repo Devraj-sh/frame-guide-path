@@ -5,9 +5,9 @@ import { Contact } from "@/components/sections/Contact";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Book a Free NEET Counselling Consultation — Meet Success" },
+      { title: "Book a Free NEET Counselling Consultation — NEET Success" },
       { name: "description", content: "Book a free 30-minute call with a senior NEET counselling mentor. Email, phone and Instagram all reach a real person, not a call centre." },
-      { property: "og:title", content: "Contact Meet Success" },
+      { property: "og:title", content: "Contact NEET Success" },
       { property: "og:description", content: "Book your free NEET counselling consultation." },
     ],
   }),

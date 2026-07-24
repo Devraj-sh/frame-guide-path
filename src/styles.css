@@ -71,7 +71,7 @@
 
 :root {
   --radius: 0.625rem;
-  /* Meet Success palette — Deep Navy #0F2A4A + Teal #2AA9A0 (from logo) */
+  /* NEET Success palette — Deep Navy #0F2A4A + Teal #2AA9A0 (from logo) */
   --background: oklch(0.985 0.005 200);
   --foreground: oklch(0.20 0.05 255);
   --card: oklch(1 0 0);

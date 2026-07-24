@@ -7,7 +7,7 @@ export function WhyUs() {
     <section id="why-us" className="relative bg-background py-28">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          eyebrow="Why Meet Success"
+          eyebrow="Why NEET Success"
           title={<>Every family deserves <span className="text-gradient-gold">boutique attention.</span></>}
           subtitle="Most counselling brands are call-centres. We are a small team of senior mentors — and it shows in every conversation."
         />
@@ -25,7 +25,7 @@ export function WhyUs() {
         <div className="reveal-up mt-16 overflow-hidden rounded-3xl border border-black/5 bg-white shadow-soft">
           <div className="grid grid-cols-3 gap-4 border-b border-black/5 bg-[color:var(--muted)] px-6 py-5 text-xs font-semibold uppercase tracking-[0.15em] text-[color:var(--navy-900)]/60 md:px-10">
             <div>Feature</div>
-            <div className="text-center">Meet Success</div>
+            <div className="text-center">NEET Success</div>
             <div className="text-center">Others</div>
           </div>
           {COMPARISON.map((row) => (
