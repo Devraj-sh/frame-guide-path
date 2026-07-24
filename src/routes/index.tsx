@@ -14,19 +14,21 @@ import { SectionHeader } from "@/components/sections/SectionHeader";
 import { useReveal } from "@/hooks/useReveal";
 import { NAV_LINKS, SERVICES } from "@/data/site";
 const logoUrl = "/media/logo.png";
+const SITE_URL = "https://neetexpert.lovable.app";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "NEET Success — Premium NEET UG Counselling & Medical Admission Guidance" },
+      { title: "NEET Success — Premium NEET UG Counselling in India" },
       { name: "description", content: "India's premium NEET UG counselling firm. Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free consultation today." },
-      { property: "og:title", content: "NEET Success — Premium NEET UG Counselling & Medical Admission Guidance" },
-      { property: "og:description", content: "India's premium NEET UG counselling firm. Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free consultation today." },
+      { property: "og:title", content: "NEET Success — Premium NEET UG Counselling in India" },
+      { property: "og:description", content: "Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free NEET UG counselling consultation." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: logoUrl },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: logoUrl },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:image", content: `${SITE_URL}${logoUrl}` },
+      { name: "twitter:image", content: `${SITE_URL}${logoUrl}` },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -34,6 +36,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
           name: "NEET Success",
+          url: SITE_URL,
           description: "Premium NEET UG counselling and medical college admission guidance across India.",
           email: "expertneet121@gmail.com",
           telephone: "+91-8882611683",
