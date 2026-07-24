@@ -30,11 +30,11 @@ export function Navbar({ variant = "hero" }: Props) {
         className="fixed inset-x-0 top-0 z-50 transition-all duration-500 data-[scrolled=true]:bg-white/70 data-[scrolled=true]:shadow-soft data-[scrolled=true]:backdrop-blur-xl data-[scrolled=true]:border-b data-[scrolled=true]:border-black/5"
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <Link to="/" className="flex items-center gap-3" aria-label="NEET Expert home">
+          <Link to="/" className="flex items-center gap-3" aria-label="Meet Success home">
             <span
               className={`font-display text-lg font-bold tracking-tight transition-colors duration-500 ${scrolled ? "text-[color:var(--navy-950)]" : "text-white"}`}
             >
-              NEET <span className="text-[color:var(--gold)]">Expert</span>
+              Meet <span className="text-[color:var(--gold)]">Success</span>
             </span>
           </Link>
 
@@ -82,7 +82,7 @@ export function Navbar({ variant = "hero" }: Props) {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img src={logoAsset.url} alt="" className="h-9 w-auto" />
-              <span className="font-display text-lg font-bold">NEET <span className="text-[color:var(--gold)]">Expert</span></span>
+              <span className="font-display text-lg font-bold">Meet <span className="text-[color:var(--gold)]">Success</span></span>
             </div>
             <button
               onClick={() => setOpen(false)}

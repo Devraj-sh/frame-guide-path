@@ -5,9 +5,9 @@ import { Colleges } from "@/components/sections/Colleges";
 export const Route = createFileRoute("/colleges")({
   head: () => ({
     meta: [
-      { title: "Medical Colleges Database — Fees, Cutoffs, Types | NEET Expert" },
+      { title: "Medical Colleges Database — Fees, Cutoffs, Types | Meet Success" },
       { name: "description", content: "Explore government, private and deemed medical colleges across India with real fees, cutoffs and category breakdowns." },
-      { property: "og:title", content: "Medical Colleges — NEET Expert" },
+      { property: "og:title", content: "Medical Colleges — Meet Success" },
       { property: "og:description", content: "India's medical colleges with real fees and cutoffs." },
     ],
   }),

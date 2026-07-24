@@ -18,9 +18,9 @@ import logoAsset from "@/assets/logo.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "NEET Expert — Premium NEET UG Counselling & Medical Admission Guidance" },
+      { title: "Meet Success — Premium NEET UG Counselling & Medical Admission Guidance" },
       { name: "description", content: "India's premium NEET UG counselling firm. Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free consultation today." },
-      { property: "og:title", content: "NEET Expert — Premium NEET UG Counselling & Medical Admission Guidance" },
+      { property: "og:title", content: "Meet Success — Premium NEET UG Counselling & Medical Admission Guidance" },
       { property: "og:description", content: "India's premium NEET UG counselling firm. Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free consultation today." },
       { property: "og:type", content: "website" },
       { property: "og:image", content: logoAsset.url },
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
-          name: "NEET Expert",
+          name: "Meet Success",
           description: "Premium NEET UG counselling and medical college admission guidance across India.",
           email: "expertneet121@gmail.com",
           telephone: "+91-8882611683",

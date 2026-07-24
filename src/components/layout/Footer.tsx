@@ -9,10 +9,10 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-4">
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="NEET Expert" className="h-12 w-auto" />
+            <img src={logoAsset.url} alt="Meet Success" className="h-12 w-auto" />
             <div>
               <div className="font-display text-xl font-bold">
-                NEET <span className="text-[color:var(--gold)]">Expert</span>
+                Meet <span className="text-[color:var(--gold)]">Success</span>
               </div>
               <div className="text-xs uppercase tracking-[0.25em] text-white/50">{CONTACT.tagline}</div>
             </div>
@@ -56,7 +56,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-xs text-white/50 sm:flex-row">
-          <p>© {new Date().getFullYear()} NEET Expert. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Meet Success. All rights reserved.</p>
           <p>Crafted with care for future doctors.</p>
         </div>
       </div>

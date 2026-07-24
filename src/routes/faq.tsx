@@ -5,9 +5,9 @@ import { Faq } from "@/components/sections/Faq";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "NEET Counselling FAQs — NEET Expert" },
+      { title: "NEET Counselling FAQs — Meet Success" },
       { name: "description", content: "Answers to the most common questions about NEET UG counselling, fees, mentorship, seat guarantees, MBBS abroad and more." },
-      { property: "og:title", content: "NEET Expert FAQs" },
+      { property: "og:title", content: "Meet Success FAQs" },
       { property: "og:description", content: "Common NEET counselling questions, answered." },
     ],
   }),

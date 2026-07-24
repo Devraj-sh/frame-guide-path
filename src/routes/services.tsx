@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services")({
     meta: [
       { title: "NEET Counselling Services — AIQ, State, Deemed & MBBS Abroad" },
       { name: "description", content: "End-to-end NEET UG counselling: AIQ, state quota, deemed, private, AYUSH, nursing, and MBBS abroad — mapped to your rank and budget." },
-      { property: "og:title", content: "NEET Expert Services" },
+      { property: "og:title", content: "Meet Success Services" },
       { property: "og:description", content: "Full-spectrum NEET counselling services from senior mentors." },
     ],
   }),
