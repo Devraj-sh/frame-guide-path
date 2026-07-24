@@ -34,7 +34,7 @@ export function Navbar({ variant = "hero" }: Props) {
             <span
               className={`font-display text-lg font-bold tracking-tight transition-colors duration-500 ${scrolled ? "text-[color:var(--navy-950)]" : "text-white"}`}
             >
-              Meet <span className="text-[color:var(--gold)]">Success</span>
+              NEET <span className="text-[color:var(--gold)]">Success</span>
             </span>
           </Link>
 
@@ -82,7 +82,7 @@ export function Navbar({ variant = "hero" }: Props) {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img src={logoAsset.url} alt="" className="h-9 w-auto" />
-              <span className="font-display text-lg font-bold">Meet <span className="text-[color:var(--gold)]">Success</span></span>
+              <span className="font-display text-lg font-bold">NEET <span className="text-[color:var(--gold)]">Success</span></span>
             </div>
             <button
               onClick={() => setOpen(false)}

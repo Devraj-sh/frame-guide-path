@@ -12,7 +12,7 @@ export function Footer() {
             <img src={logoAsset.url} alt="NEET Success" className="h-12 w-auto" />
             <div>
               <div className="font-display text-xl font-bold">
-                Meet <span className="text-[color:var(--gold)]">Success</span>
+                NEET <span className="text-[color:var(--gold)]">Success</span>
               </div>
               <div className="text-xs uppercase tracking-[0.25em] text-white/50">{CONTACT.tagline}</div>
             </div>
