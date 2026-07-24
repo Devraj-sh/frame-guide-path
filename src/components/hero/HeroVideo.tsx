@@ -36,7 +36,7 @@ export function HeroVideo() {
 
   return (
     <section
-      aria-label="NEET Expert introduction"
+      aria-label="Meet Success introduction"
       className="relative h-screen w-full overflow-hidden bg-navy-950"
     >
       <video

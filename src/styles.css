@@ -71,7 +71,7 @@
 
 :root {
   --radius: 0.625rem;
-  /* NEET Expert palette — Deep Navy, Royal Blue, Luxury Gold, Emerald */
+  /* Meet Success palette — Deep Navy, Royal Blue, Luxury Gold, Emerald */
   --background: oklch(0.985 0.005 240);
   --foreground: oklch(0.16 0.03 260);
   --card: oklch(1 0 0);

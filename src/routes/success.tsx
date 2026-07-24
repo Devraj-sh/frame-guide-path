@@ -6,9 +6,9 @@ import { About } from "@/components/sections/About";
 export const Route = createFileRoute("/success")({
   head: () => ({
     meta: [
-      { title: "Student Success Stories — NEET Expert" },
-      { name: "description", content: "Real students, real ranks, real seats. Stories from students placed in AIIMS, MAMC, Grant, KMC Manipal and more via NEET Expert counselling." },
-      { property: "og:title", content: "NEET Expert Success Stories" },
+      { title: "Student Success Stories — Meet Success" },
+      { name: "description", content: "Real students, real ranks, real seats. Stories from students placed in AIIMS, MAMC, Grant, KMC Manipal and more via Meet Success counselling." },
+      { property: "og:title", content: "Meet Success Success Stories" },
       { property: "og:description", content: "Real students placed in India's top medical colleges." },
     ],
   }),
