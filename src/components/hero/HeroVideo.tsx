@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { HeroOverlay } from "./HeroOverlay";
-import heroVideo from "@/assets/hero-advertisement.mp4.asset.json";
 
 export function HeroVideo() {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,7 +30,7 @@ export function HeroVideo() {
     };
   }, []);
 
-  const src = heroVideo.url;
+  const src = "/media/hero-advertisement.mp4";
 
   return (
     <section

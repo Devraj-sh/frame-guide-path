@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/logo.png.asset.json";
+const logoUrl = "/media/logo.png";
 
 export function LoadingScreen() {
   const [progress, setProgress] = useState(0);
@@ -43,7 +43,7 @@ export function LoadingScreen() {
             </linearGradient>
           </defs>
         </svg>
-        <img src={logoAsset.url} alt="NEET Success" className="absolute inset-4 h-24 w-24 object-contain" />
+        <img src={logoUrl} alt="NEET Success" className="absolute inset-4 h-24 w-24 object-contain" />
       </div>
       <p className="mt-8 font-display text-2xl font-bold text-white">NEET Success</p>
       <p className="mt-2 text-xs uppercase tracking-[0.35em] text-white/60">Right path changes everything</p>

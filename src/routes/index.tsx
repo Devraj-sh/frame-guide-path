@@ -13,7 +13,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { useReveal } from "@/hooks/useReveal";
 import { NAV_LINKS, SERVICES } from "@/data/site";
-import logoAsset from "@/assets/logo.png.asset.json";
+const logoUrl = "/media/logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,9 +23,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "NEET Success — Premium NEET UG Counselling & Medical Admission Guidance" },
       { property: "og:description", content: "India's premium NEET UG counselling firm. Personal mentors, transparent choice-filling, thousands of medical seats secured. Book a free consultation today." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: logoAsset.url },
+      { property: "og:image", content: logoUrl },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: logoAsset.url },
+      { name: "twitter:image", content: logoUrl },
     ],
     scripts: [
       {

@@ -1,6 +1,6 @@
 import { Instagram, Mail, Phone, MessageCircle } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/logo.png.asset.json";
+const logoUrl = "/media/logo.png";
 import { CONTACT, NAV_LINKS, SERVICES } from "@/data/site";
 
 export function Footer() {
@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-4">
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="NEET Success" className="h-12 w-auto" />
+            <img src={logoUrl} alt="NEET Success" className="h-12 w-auto" />
             <div>
               <div className="font-display text-xl font-bold">
                 NEET <span className="text-[color:var(--gold)]">Success</span>
