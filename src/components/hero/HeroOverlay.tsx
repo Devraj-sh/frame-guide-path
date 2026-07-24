@@ -10,8 +10,8 @@ export function HeroOverlay() {
       </div>
 
       <h1 className="font-display text-balance text-[3.25rem] font-extrabold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-        <span className="block">NEET</span>
-        <span className="block text-gradient-gold">Expert</span>
+        <span className="block">Meet</span>
+        <span className="block text-gradient-gold">Success</span>
       </h1>
 
       <p className="mt-4 max-w-xl text-base font-medium text-white/80 sm:mt-6 sm:text-lg md:text-xl">
