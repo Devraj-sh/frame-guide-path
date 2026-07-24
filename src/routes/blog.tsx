@@ -9,7 +9,10 @@ export const Route = createFileRoute("/blog")({
       { name: "description", content: "Choice-filling frameworks, college comparisons, state quota rules, deemed college ROI — deep-dive insights for NEET UG aspirants and parents." },
       { property: "og:title", content: "NEET Success Insights" },
       { property: "og:description", content: "Deep-dive NEET counselling guides and strategy." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://neetexpert.lovable.app/blog" },
     ],
+    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/blog" }],
   }),
   component: BlogPage,
 });

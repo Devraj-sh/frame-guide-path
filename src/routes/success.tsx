@@ -10,7 +10,10 @@ export const Route = createFileRoute("/success")({
       { name: "description", content: "Real students, real ranks, real seats. Stories from students placed in AIIMS, MAMC, Grant, KMC Manipal and more via NEET Success counselling." },
       { property: "og:title", content: "NEET Success Stories" },
       { property: "og:description", content: "Real students placed in India's top medical colleges." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://neetexpert.lovable.app/success" },
     ],
+    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/success" }],
   }),
   component: SuccessPage,
 });

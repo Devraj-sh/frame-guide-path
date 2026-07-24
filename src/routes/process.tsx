@@ -9,7 +9,10 @@ export const Route = createFileRoute("/process")({
       { name: "description", content: "From free discovery call to post-admission support — a transparent 8-step process that has placed thousands of students in Indian medical colleges." },
       { property: "og:title", content: "Our Counselling Process" },
       { property: "og:description", content: "The 8-step NEET Success counselling journey." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://neetexpert.lovable.app/process" },
     ],
+    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/process" }],
   }),
   component: ProcessPage,
 });

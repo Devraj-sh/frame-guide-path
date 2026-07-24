@@ -125,7 +125,7 @@ function ExploreGrid() {
           {featured.map((s) => (
             <div key={s.title} className="reveal-up rounded-2xl border border-black/5 bg-white p-6 shadow-soft">
               <s.icon className="h-6 w-6 text-[color:var(--gold)]" />
-              <h4 className="mt-4 font-display text-lg font-bold text-[color:var(--navy-950)]">{s.title}</h4>
+              <h3 className="mt-4 font-display text-lg font-bold text-[color:var(--navy-950)]">{s.title}</h3>
               <p className="mt-2 text-sm text-[color:var(--navy-900)]/70">{s.desc}</p>
             </div>
           ))}

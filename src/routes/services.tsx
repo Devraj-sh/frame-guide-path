@@ -10,7 +10,10 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "End-to-end NEET UG counselling: AIQ, state quota, deemed, private, AYUSH, nursing, and MBBS abroad — mapped to your rank and budget." },
       { property: "og:title", content: "NEET Success Services" },
       { property: "og:description", content: "Full-spectrum NEET counselling services from senior mentors." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://neetexpert.lovable.app/services" },
     ],
+    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/services" }],
   }),
   component: ServicesPage,
 });
