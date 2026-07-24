@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import logoAsset from "@/assets/logo.png.asset.json";
+import logoAsset from "@/assets/logo-transparent.png.asset.json";
 import { NAV_LINKS } from "@/data/site";
 
 type Props = { variant?: "hero" | "solid" };
@@ -31,11 +31,11 @@ export function Navbar({ variant = "hero" }: Props) {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-3" aria-label="NEET Success home">
-            <span
-              className={`font-display text-lg font-bold tracking-tight transition-colors duration-500 ${scrolled ? "text-[color:var(--navy-950)]" : "text-white"}`}
-            >
-              NEET <span className="text-[color:var(--gold)]">Success</span>
-            </span>
+            <img
+              src={logoAsset.url}
+              alt="NEET Success"
+              className={`h-10 w-auto transition-all duration-500 sm:h-11 ${scrolled ? "" : "brightness-0 invert"}`}
+            />
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex">
