@@ -8,7 +8,7 @@ export const Route = createFileRoute("/success")({
     meta: [
       { title: "Student Success Stories — Meet Success" },
       { name: "description", content: "Real students, real ranks, real seats. Stories from students placed in AIIMS, MAMC, Grant, KMC Manipal and more via Meet Success counselling." },
-      { property: "og:title", content: "Meet Success Success Stories" },
+      { property: "og:title", content: "Meet Success Stories" },
       { property: "og:description", content: "Real students placed in India's top medical colleges." },
     ],
   }),
