@@ -85,7 +85,7 @@ export const submitEnquiry = createServerFn({ method: "POST" })
           },
           body: JSON.stringify({
             from: "NEET Success <onboarding@resend.dev>",
-            to: ["expertneet121@gmail.com"],
+            to: ["neetsuccess121@gmail.com"],
             subject: `New enquiry — ${data.name}`,
             html,
             reply_to: data.email,
