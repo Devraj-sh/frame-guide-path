@@ -13,7 +13,8 @@ export function Contact() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     setLoading(true);
     try {
       const scoreRaw = String(fd.get("neet_score") ?? "").trim();
@@ -33,7 +34,7 @@ export function Contact() {
       });
       if (res.ok) {
         toast.success("Consultation request received! We'll call you within 24 hours.");
-        (e.currentTarget as HTMLFormElement).reset();
+        form.reset();
         startedAt.current = Date.now();
       } else {
         toast.error(res.error ?? "Something went wrong. Please try again.");
