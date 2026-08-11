@@ -10,9 +10,9 @@ export const Route = createFileRoute("/blog")({
       { property: "og:title", content: "NEET Success Insights" },
       { property: "og:description", content: "Deep-dive NEET counselling guides and strategy." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://neetexpert.lovable.app/blog" },
+      { property: "og:url", content: "https://neetsuccess.in/blog" },
     ],
-    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/blog" }],
+    links: [{ rel: "canonical", href: "https://neetsuccess.in/blog" }],
   }),
   component: BlogPage,
 });

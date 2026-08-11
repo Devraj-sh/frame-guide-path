@@ -11,9 +11,9 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "NEET Success Services" },
       { property: "og:description", content: "Full-spectrum NEET counselling services from senior mentors." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://neetexpert.lovable.app/services" },
+      { property: "og:url", content: "https://neetsuccess.in/services" },
     ],
-    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/services" }],
+    links: [{ rel: "canonical", href: "https://neetsuccess.in/services" }],
   }),
   component: ServicesPage,
 });

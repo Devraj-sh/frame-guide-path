@@ -14,7 +14,7 @@ import { SectionHeader } from "@/components/sections/SectionHeader";
 import { useReveal } from "@/hooks/useReveal";
 import { NAV_LINKS, SERVICES } from "@/data/site";
 const logoUrl = "/media/logo.png";
-const SITE_URL = "https://neetexpert.lovable.app";
+const SITE_URL = "https://neetsuccess.in";
 
 export const Route = createFileRoute("/")({
   head: () => ({

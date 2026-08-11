@@ -12,7 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 const logoUrl = "/media/logo.png";
-const SITE_URL = "https://neetexpert.lovable.app";
+const SITE_URL = "https://neetsuccess.in";
 import { FloatingDock } from "@/components/layout/FloatingDock";
 import { ConsultationPopup } from "@/components/layout/ConsultationPopup";
 
@@ -111,6 +111,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           telephone: "+91-8882611683",
           sameAs: ["https://www.instagram.com/neetsuccess.121"],
           description: "India's premium NEET UG counselling & medical college admission guidance firm.",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "NEET Success",
+          alternateName: ["NEET Success Counselling", "NEETSuccess", "NEET Success India"],
+          url: SITE_URL,
         }),
       },
     ],

@@ -10,9 +10,9 @@ export const Route = createFileRoute("/process")({
       { property: "og:title", content: "Our Counselling Process" },
       { property: "og:description", content: "The 8-step NEET Success counselling journey." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://neetexpert.lovable.app/process" },
+      { property: "og:url", content: "https://neetsuccess.in/process" },
     ],
-    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/process" }],
+    links: [{ rel: "canonical", href: "https://neetsuccess.in/process" }],
   }),
   component: ProcessPage,
 });

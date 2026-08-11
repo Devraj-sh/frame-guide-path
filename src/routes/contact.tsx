@@ -10,9 +10,9 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact NEET Success" },
       { property: "og:description", content: "Book your free NEET counselling consultation." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://neetexpert.lovable.app/contact" },
+      { property: "og:url", content: "https://neetsuccess.in/contact" },
     ],
-    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/contact" }],
+    links: [{ rel: "canonical", href: "https://neetsuccess.in/contact" }],
   }),
   component: ContactPage,
 });

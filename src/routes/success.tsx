@@ -11,9 +11,9 @@ export const Route = createFileRoute("/success")({
       { property: "og:title", content: "NEET Success Stories" },
       { property: "og:description", content: "Real students placed in India's top medical colleges." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://neetexpert.lovable.app/success" },
+      { property: "og:url", content: "https://neetsuccess.in/success" },
     ],
-    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/success" }],
+    links: [{ rel: "canonical", href: "https://neetsuccess.in/success" }],
   }),
   component: SuccessPage,
 });

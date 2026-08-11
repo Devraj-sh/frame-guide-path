@@ -10,9 +10,9 @@ export const Route = createFileRoute("/colleges")({
       { property: "og:title", content: "Medical Colleges — NEET Success" },
       { property: "og:description", content: "India's medical colleges with real fees and cutoffs." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://neetexpert.lovable.app/colleges" },
+      { property: "og:url", content: "https://neetsuccess.in/colleges" },
     ],
-    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/colleges" }],
+    links: [{ rel: "canonical", href: "https://neetsuccess.in/colleges" }],
   }),
   component: CollegesPage,
 });
