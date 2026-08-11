@@ -113,6 +113,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           description: "India's premium NEET UG counselling & medical college admission guidance firm.",
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "NEET Success",
+          alternateName: ["NEET Success Counselling", "NEETSuccess", "NEET Success India"],
+          url: SITE_URL,
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
