@@ -11,9 +11,9 @@ export const Route = createFileRoute("/faq")({
       { property: "og:title", content: "NEET Success FAQs" },
       { property: "og:description", content: "Common NEET counselling questions, answered." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://neetexpert.lovable.app/faq" },
+      { property: "og:url", content: "https://neetsuccess.in/faq" },
     ],
-    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/faq" }],
+    links: [{ rel: "canonical", href: "https://neetsuccess.in/faq" }],
     scripts: [
       {
         type: "application/ld+json",

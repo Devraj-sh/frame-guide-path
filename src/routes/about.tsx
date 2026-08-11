@@ -11,9 +11,9 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About NEET Success" },
       { property: "og:description", content: "Senior NEET counselling mentors — mission, vision and outcomes." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://neetexpert.lovable.app/about" },
+      { property: "og:url", content: "https://neetsuccess.in/about" },
     ],
-    links: [{ rel: "canonical", href: "https://neetexpert.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://neetsuccess.in/about" }],
   }),
   component: AboutPage,
 });

@@ -12,7 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 const logoUrl = "/media/logo.png";
-const SITE_URL = "https://neetexpert.lovable.app";
+const SITE_URL = "https://neetsuccess.in";
 import { FloatingDock } from "@/components/layout/FloatingDock";
 import { ConsultationPopup } from "@/components/layout/ConsultationPopup";
 
